@@ -1,0 +1,5 @@
+todas las tareas estan subidas en un repositorio remoto de git para su mejor acceso
+cada archivo tiene una asignacion:
+-(terminar): archivo que necesita ser editado
+- "(algo)": archivo que debe ser editado, su valor de asignacion nos dara las referencias necesarias para su finalizacion
+-null: si es un vacio, quiere decir que la tarea ya fue completada o no es necesario ningun cambio 

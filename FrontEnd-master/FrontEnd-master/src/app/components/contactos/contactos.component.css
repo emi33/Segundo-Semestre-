@@ -1,0 +1,10 @@
+
+.form-icon{
+  width: 100px;
+  height: 50px;
+}
+.horizontal {
+    display: flex;
+    flex-wrap:wrap;
+}
+  

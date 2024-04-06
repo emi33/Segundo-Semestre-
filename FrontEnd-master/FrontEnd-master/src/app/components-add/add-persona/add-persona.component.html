@@ -1,0 +1,78 @@
+<!--No vamos a usar este add-persona porque no vamos a crear nuevas personas-->
+<body>
+  <div class="container">
+    <div class="row">
+      
+      <div class="registro-persona">
+        
+        <div class="edit-form" (ngSubmit)="savePersona()" [formGroup]="personaForm">
+          
+            <div *ngIf="!submitted" class="mb-4">
+              <div class="form-icon mb-4">
+                <span><i class="bi bi-person"></i></span>
+              </div>
+            
+              <h2 class="text-center mb-4">Crea un Perfil Nuevo</h2>
+              <div class="mb-4">
+                <label for="nombre" class="form-label">Escribe tu nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required formControlName="nombre"/>
+                <div *ngIf="personaForm.get('nombre')?.touched && personaForm.get('nombre')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+                <div *ngIf="personaForm.get('nombre')?.touched && personaForm.get('nombre')?.errors?.['minlength']" class="alert alert-danger">Este campo debe tener mas de {{personaForm.get('nombre')?.errors?.['minlength'].requiredLength}} caracteres</div>
+              </div>
+        
+              <div class="mb-4">
+                <label for="apellido" class="form-label">Escribe tu apellido</label>
+                <input class="form-control" id="apellido" required formControlName="apellido" name="apellido" />
+                <div *ngIf="personaForm.get('apellido')?.touched && personaForm.get('apellido')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+                <div *ngIf="personaForm.get('apellido')?.touched && personaForm.get('apellido')?.errors?.['minlength']" class="alert alert-danger">Este campo debe tener mas de {{personaForm.get('apellido')?.errors?.['minlength'].requiredLength}} caracteres</div>
+              </div>
+        
+              <div class="mb-4">
+                <label for="edad" class="form-label">Ingresa tu edad</label>
+                <input type="number" class="form-control" id="edad" required formControlName="edad" name="edad" />
+                <div *ngIf="personaForm.get('edad')?.touched && personaForm.get('edad')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+                <div *ngIf="personaForm.get('edad')?.touched && personaForm.get('edad')?.errors?.['pattern']" class="alert alert-danger">Número incorrecto</div>
+              </div>
+        
+              <div class="mb-4">
+                <label for="acercade" class="form-label">Aquí puedes colocar una decripcion sobre ti mismo</label>
+                <textarea name="acercade" id="acercade" cols="30" rows="5" class="form-control" required formControlName="acercade">
+                </textarea>
+                <div *ngIf="personaForm.get('acercade')?.touched && personaForm.get('acercade')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+                <div *ngIf="personaForm.get('acercade')?.touched && personaForm.get('acercade')?.errors?.['minlength']" class="alert alert-danger">Este campo debe tener mas de {{personaForm.get('acercade')?.errors?.['minlength'].requiredLength}} caracteres</div>
+              </div>
+              <div class="mb-4">
+                <label for="ocupacion" class="form-label">¿Cuál es tu ocupación?</label>
+                <input class="form-control" id="ocupacion" required formControlName="ocupacion" name="ocupacion" />
+                <div *ngIf="personaForm.get('ocupacion')?.touched && personaForm.get('ocupacion')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+                <div *ngIf="personaForm.get('ocupacion')?.touched && personaForm.get('ocupacion')?.errors?.['minlength']" class="alert alert-danger">Este campo debe tener mas de {{personaForm.get('ocupacion')?.errors?.['minlength'].requiredLength}} caracteres</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label">¿Cuál es tu correo?</label>
+                <input class="form-control" id="email" required formControlName="email" name="email" />
+                <div *ngIf="personaForm.get('email')?.touched && personaForm.get('email')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</div>
+                <div *ngIf="personaForm.get('email')?.touched && personaForm.get('email')?.errors?.['email']" class="alert alert-danger">Debes agregar un correo en este campo</div>
+              </div>
+            
+             
+              <button type="submit" class="btn btn-success  mb-2" [disabled]="personaForm.invalid"
+              (click)="savePersona()">
+                Submit
+              </button>
+            </div>
+        
+            <div *ngIf="submitted" class="mb-4">
+              <h4>Creaste un perfil de forma exitosa</h4>
+              <button class="btn btn-success" (click)="newPersona()">Crear otro Perfil</button>
+            </div>
+            <div class="mb-4">
+              <a class="btn btn-warning" routerLink="/portfolio/{{numero}}" >
+                Volver a Home
+              </a>
+            </div>
+          </div>
+      </div> 
+      </div>
+    </div>
+</body>

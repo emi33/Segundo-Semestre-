@@ -1,0 +1,27 @@
+#acercade {
+    padding: 10px;
+    margin: 10px;
+  }
+  img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover; 
+   border-radius: 20%;
+   background-color: #276fab;
+   padding: 4px;
+
+  }
+  
+  .gradient {
+    background: #0eff0e;
+    background: -webkit-linear-gradient(to right, #8b22a5, #5a8a0d);
+    background: linear-gradient(to right, #127dda, #af3735);
+  }
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+  .text-color {
+    color: #ddb91b;
+  }
+
+ 

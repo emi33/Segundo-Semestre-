@@ -1,0 +1,25 @@
+<header>
+    <nav class="navbar navbar-dark bg-info">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="../../../assets/APLogo-20-20.png" alt="logoarg"></a>
+            <div *ngIf="!authService.isLoggedIn">
+                <button class="btn btn-primary" routerLink="/login">Ingresar</button></div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                *ngIf="authService.isLoggedIn">
+                <i class="bi bi-person"></i> Mi Cuenta</button>
+            <div class="collapse navbar-collapse menu" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <div class="right-aligned">
+                        <button class="btn btn-light" routerLink="/personas">Ver Perfiles</button>
+                    </div>
+                    <div class="right-aligned">
+                        <button class="btn btn-light" routerLink="/add?persona/{{numero}}">Crear Perfil</button>
+                    </div>
+                    <div class="right-aligned"> 
+                        <input type="button" class="btn btn-danger" value="Cerrar Sesión" (click)="authService.SignOut()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

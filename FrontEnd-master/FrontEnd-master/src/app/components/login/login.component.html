@@ -1,0 +1,47 @@
+<section class=" text-center text-lg-start">
+  <div class="card mb-3">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 d-none d-lg-flex">
+        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" alt="Trendy Pants and Shoes"
+          class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+      </div>
+      
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5">
+          <form [formGroup]="log">
+            <div class="form-outline mb-4 formGroup">
+              <input type="text" class="formControl" placeholder="ingresa tu email" formControlName="userName" #userName required />
+              <label class="form-label" for="form2Example1">Email</label>
+              <div *ngIf="log.get('userName')?.invalid && (log.get('userName')?.dirty || log.get('userName')?.touched)" style="color:red">
+                Error al ingresar email
+              </div>
+            </div>
+            
+            <div class="form-outline mb-4 formGroup">
+              <input type="password" class="formControl" placeholder="ingresa tu contraseña" formControlName="password" #userPassword required />
+              <label class="form-label" for="form2Example2">Contraseña</label>
+              <div *ngIf="log.get('password')?.invalid && (log.get('password')?.dirty || log.get('password')?.touched)" style="color:red">
+                Error contraseña muy corta
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="forgotPassword">
+                <button class="btn btn-link" routerLink="/olvidar-password">¿Olvidaste tu contraseña?</button>
+              </div>
+            </div>
+            <div class="formGroup">
+              <input type="button" class="btn btn-primary" value="Ingresar" [disabled]="log.invalid"
+                (click)="authService.SignIn(userName.value, userPassword.value)">
+            </div>
+            <div class="redirectToLogin mt-1">
+              ¿No tienes una cuenta?<button class="redirect btn btn-link" routerLink="/register">Registrarse</button>
+            </div>
+            <div class="redirectToLogin">
+              <button class="redirect btn btn-link" routerLink="/portfolio">Home</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

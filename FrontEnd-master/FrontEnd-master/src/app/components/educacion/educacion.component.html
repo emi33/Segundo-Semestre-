@@ -1,0 +1,44 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-12 mx-auto mb-5  text-center">
+            <h1 class="display-4">Formación Académica</h1>
+        </div>
+        <div class="gradient rounded-lg p-5 shadow" *ngIf="edu">
+            <table class="table table-responsive" >
+                <thead>
+                    <tr>
+                        <th>Institución</th>
+                        <th>Titulo</th>
+                        <th>Fecha de inicio</th>
+                        <th>Fecha de finalización</th>                                       
+                    </tr>
+                </thead>            
+                <tbody *ngFor="let estudios of edu"  >
+                    <tr>
+                        <td>
+                            <h6>{{estudios.institucion}}</h6>
+                        </td>
+                        <td>
+                            <h6>{{ estudios.titulo }}</h6>
+                        </td>
+                        <td>
+                            {{ estudios.fechainicio }}
+                        </td>
+                        <td>
+                            {{estudios.fechafin}}
+                        </td>
+                      <td *ngIf="authService.isLoggedIn">
+                        <a class="btn btn-warning " style="margin-right: 5px;"  routerLink="/educacion/{{estudios.id}}"><i
+                            class="bi bi-pencil"></i></a>
+                            <button type="submit" (click)="deleteEducacion(estudios.id)" class="btn btn-danger"><i
+                                class="bi bi-trash"></i></button>
+                      </td>                                               
+                    </tr>
+                </tbody>        
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="text-center" *ngIf="authService.isLoggedIn"><button class="btn btn-primary" routerLink="/add?educacion/{{id}}">Crear
+        Educacion <i class="bi bi-plus"></i></button></div>
+</div>
