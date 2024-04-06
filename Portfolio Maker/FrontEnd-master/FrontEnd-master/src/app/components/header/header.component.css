@@ -1,0 +1,23 @@
+
+.menu {
+    padding: 0;
+    margin-top: auto;
+    float: right;
+   
+}
+button{
+    float: right;
+}
+
+img{
+    width: 130px;
+    height: auto;
+}
+
+.right-aligned {
+    text-align: right;
+    margin-bottom: 1%;
+  }
+  .navbar-toggler{
+    color: rgb(255, 255, 255);
+  }
