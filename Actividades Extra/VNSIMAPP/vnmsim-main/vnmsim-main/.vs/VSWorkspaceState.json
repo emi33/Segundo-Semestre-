@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src-tauri\\shared"
+    "\\src-tauri",
+    "\\src-tauri\\src"
   ],
-  "SelectedNode": "\\src-tauri",
   "PreviewInSolutionExplorer": false
 }

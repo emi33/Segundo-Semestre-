@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Documents\\Desarrollo De Software 2023 Junin\\Segundo Semestre\\Actividades Extra\\VNSIMAPP\\vnmsim-main\\vnmsim-main\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Emi\\Documents\\ITU DESARROLLO\\Segundo Semestre\\Actividades Extra\\VNSIMAPP\\vnmsim-main\\vnmsim-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Emi\\Documents\\ITU DESARROLLO\\Segundo Semestre\\Actividades Extra\\VNSIMAPP\\vnmsim-main\\vnmsim-main\\src-tauri\\src\\lib.rs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src-tauri\\src\\lib.rs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lib.rs",
+              "DocumentMoniker": "C:\\Users\\Emi\\Documents\\ITU DESARROLLO\\Segundo Semestre\\Actividades Extra\\VNSIMAPP\\vnmsim-main\\vnmsim-main\\src-tauri\\src\\lib.rs",
+              "RelativeDocumentMoniker": "src-tauri\\src\\lib.rs",
+              "ToolTip": "C:\\Users\\Emi\\Documents\\ITU DESARROLLO\\Segundo Semestre\\Actividades Extra\\VNSIMAPP\\vnmsim-main\\vnmsim-main\\src-tauri\\src\\lib.rs",
+              "RelativeToolTip": "src-tauri\\src\\lib.rs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-10T11:30:11.05Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
