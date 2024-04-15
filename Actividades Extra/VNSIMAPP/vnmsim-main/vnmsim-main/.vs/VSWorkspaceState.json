@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src-tauri",
+    "\\.github\\workflows",
+    "\\src",
+    "\\src-tauri\\capabilities",
+    "\\src-tauri\\capabilities\\schemas",
+    "\\src-tauri\\gen",
+    "\\src-tauri\\icons",
+    "\\src-tauri\\shared",
+    "\\src-tauri\\shared\\src",
     "\\src-tauri\\src"
   ],
+  "SelectedNode": "\\src\\app",
   "PreviewInSolutionExplorer": false
 }
