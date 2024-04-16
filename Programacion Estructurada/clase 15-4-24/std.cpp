@@ -1,7 +1,6 @@
 
 #include <stdio.h>
 #include <string.h>
-
 #include <iostream>
 int main(){
     //usar strcmp, escribir dos cadenas. determinar si son iguales, mayores o menores;
