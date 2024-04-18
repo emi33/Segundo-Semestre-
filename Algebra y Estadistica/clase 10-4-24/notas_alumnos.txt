@@ -1,0 +1,16 @@
+USE estadistica; -- Cambia al esquema estadistica
+
+INSERT INTO notas (alumno, nota) 
+VALUES 
+    ('a', 1),
+('b', 3.50),
+('c', 4),
+('d', 9.50),
+('e', 8),
+('f', 7.50),
+('g', 7.50),
+('h', 6.50),
+('u', 6.50),
+('choque', 7.50),
+('guzman', 9.50),
+('payaso', 10),
