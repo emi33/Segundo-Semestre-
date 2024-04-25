@@ -1,0 +1,9 @@
+-- create user 'emiliano' identified by 'manager';
+-- grant all privileges on *.* to 'emiliano';
+-- revoke all privileges, grant option from 'emiliano'; -- quitar privilegios
+show databases;
+use fincas;
+select * from especies;
+revoke all privileges, grant option from 'emiliano';
+show databases;
+SET GLOBAL validate_password.policy=LOW;
