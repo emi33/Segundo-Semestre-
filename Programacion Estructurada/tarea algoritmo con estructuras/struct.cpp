@@ -15,24 +15,30 @@ llamado valor.*/
 #include <cstring>
 #include <limits>
 #include <string>
+#define MAX_ALUMNS 60
+#define MAX_NAME_SUBJ 20
+#define MAX_GRADES 15
+#define MAX_SUBJECTS 30
+#define MAX_NAME_LENGTH 25
 using namespace std;
 void menu()
 {
-    cout << "-------------------------Bienvenido al programa Mis alumnos-------------------------\n"
+    cout << "------------------------------------------------------------------------------------\n"
+         << "-------------------------Bienvenido al programa Mis alumnos-------------------------\n"
          << "------El programa simula una aplicacion para cargar notas, materias y alumnos-------\n"
          << "-Debe cargar la cantidad de notas, la cantidad de materias y la cantidad de alumnos-\n"
          << "-----------------Luego, carga los datos necesarios para cada alumno-----------------\n"
-         << "-----Recuerde que puede volver para atras si cree que se equivoco en algun dato-----\n";
+         //<< "-----Recuerde que puede volver para atras si cree que se equivoco en algun dato-----\n"
+         << "------------------------------------------------------------------------------------\n";
 }
-int *cantidades()
+int* cantidades()
 {
     bool flag;
-    int aux = 60;
+    int aux = MAX_ALUMNS;
     int *cantidades = new int[3];
     char estructuras[3][10] = {"alumnos", "materias", "notas"};
     for (int i = 0; i < 3; i++)
     {
-
         flag = true;
         int a;
         do
@@ -51,16 +57,17 @@ int *cantidades()
         } while (flag);
         aux = aux / 2;
     }
+ 
     return cantidades;
 }
-char **asignaturas(int mat)
+char** asignaturas(int mat)
 {
     char **asignaturas = new char *[mat];
     cin.ignore();
     for (int i = 0; i < mat; i++)
     {
-        // fflush(stdin);
-        asignaturas[i] = new char[25];
+        //fflush(stdin);
+        asignaturas[i] = new char[MAX_NAME_SUBJ];
         cout << "Ingresa la materia " << i + 1 << ":\n";
         cin.getline(asignaturas[i], 25);
     }
@@ -74,10 +81,9 @@ struct nota
 // estructura materias
 struct materia
 {
-    char nombre[20];
-    struct nota notas[15];
+    char nombre[MAX_NAME_SUBJ];
+    struct nota notas[MAX_GRADES];
 };
-
 // estructura alumnos
 struct alumno
 {
@@ -85,9 +91,8 @@ struct alumno
     char *apellido;
     int edad;
     int dni;
-    struct materia materias[30];
+    struct materia materias[MAX_SUBJECTS];
 };
-
 int main()
 {
     // bienvenida al programa y descripcion de como funciona
@@ -111,8 +116,7 @@ int main()
     // boton de recargar en caso de error(pendiente)
 
     // cargar alumno y sus notas
-    alumno alumnos[99];
-    const int MAX_NAME_LENGTH = 25;
+    alumno alumnos[MAX_ALUMNS];
     for (int i = 0; i < valores[0]; i++)
     {
         fflush(stdin);
@@ -136,7 +140,6 @@ int main()
             printf("Notas del alumno %s %s:\n", alumnos[i].nombre, alumnos[i].apellido);
             for (int k = 0; k < valores[2]; k++)
             {
-
                 fflush(stdin);
                 cout << "Ingrese nota " << k + 1 << ": ";
                 cin >> alumnos[i].materias[j].notas[k].valor;
@@ -146,7 +149,7 @@ int main()
     // mostrar todos los alumnos, notas de cada materia
     for (int i = 0; i < valores[0]; i++)
     {
-        cout << "Alumno " << i + 1 << ":\n "
+        cout << "Alumno " << i + 1 << ":\n"
              << "   Nombre: " << alumnos[i].nombre << "\n"
              << "   Apellido: " << alumnos[i].apellido << "\n"
              << "   Edad: " << alumnos[i].edad << "\n"
@@ -172,6 +175,7 @@ int main()
     {
         delete[] temp[i];
     }
+    
     delete[] valores;
     delete[] temp;
 
