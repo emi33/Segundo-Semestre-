@@ -8,7 +8,6 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
-
   numero: number= this.route.snapshot.params['id'];
   @Input() id: number=1;
   constructor( public authService: AuthService, private route: ActivatedRoute){}
