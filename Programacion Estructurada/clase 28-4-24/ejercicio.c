@@ -7,7 +7,7 @@ typedef struct {
     int programacion;
 } Nota;
 
-void darNotas(struct Nota *notas){
+void darNotas(Nota *notas){
     int n;
     printf("cargar nota matematica: ");
     scanf("%d", &(notas->matematica));
@@ -16,10 +16,10 @@ void darNotas(struct Nota *notas){
     printf("cargar nota programacion: ");
     scanf("%d", &(notas->programacion));
 }
-void mostrarNotas(struct Nota *notas){
-    printf("mates:  %d\n", notas.matematica));
-    printf("fis:  %d\n", &(notas.matematica));
-    printf("program:  %d\n", &(notas->matematica));
+void mostrarNotas(Nota *notas){
+    printf("mates:  %d\n", notas->matematica);
+    printf("fis:  %d\n", notas->fisica);
+    printf("program:  %d\n", notas->programacion);
 }
 int main(){
     Nota notas;
