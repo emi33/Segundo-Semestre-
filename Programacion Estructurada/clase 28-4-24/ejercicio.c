@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+
 typedef struct {
     int matematica;
     int fisica;
@@ -25,6 +26,7 @@ int main(){
     Nota notas;
     darNotas(&notas);
     mostrarNotas(&notas); 
+  
     printf("\n Matematica: %d", notas.matematica);
     printf("\n Fisica: %d", notas.fisica);
     printf("\n Programacion: %d", notas.programacion);
