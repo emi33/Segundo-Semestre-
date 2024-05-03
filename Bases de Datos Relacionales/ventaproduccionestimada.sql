@@ -1,11 +1,10 @@
-
 USE fincas;
 SELECT
     f.fcaNombre AS Finca,
     pa.prcRef AS Parcela,
     pv.vepProdEstim AS Produccion_Estimada
 FROM
-    fincas f
+    fincas f, 
 INNER JOIN
     parcelas pa ON f.fcaID = pa.prcFinca
 INNER JOIN
@@ -17,4 +16,3 @@ WHERE
     AND v.vrdEspecie = 6;
 select * FROM parcelavariedad where vepVariedad=18;
 select sum(vepProdEstim) from parcelaVariedad where vepVariedad=18;
- 
