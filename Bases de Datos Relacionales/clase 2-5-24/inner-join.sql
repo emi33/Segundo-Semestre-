@@ -37,6 +37,7 @@ having Variedad like 'Desconocida' -- muestra variedad ya que ejecuta having des
 order by especie,variedad;
 -- BORRAR
 delete from especies where espID in (10,12,15,16);
-delete from ca where espID IN(select espID, espNombre as especie, ifnull(vrdVariedad, 'Desconocida') 
+use fincas;
+delete from cena where espID IN(select espID, espNombre as especie, ifnull(vrdVariedad, 'Desconocida') 
 as variedad from especies left join variedades on espID=vrdEspecie
-having Variedad like 'Desconocida') C1; -- ARREGLAR SINTAXIS
+having Variedad like 'Desconocida')as cena; -- ARREGLAR SINTAXIS
