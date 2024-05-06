@@ -94,7 +94,7 @@ struct alumno
     struct materia materias[MAX_SUBJECTS];
 };
 int main()
-{
+{ 
     // bienvenida al programa y descripcion de como funciona
     menu();
     system("pause");
