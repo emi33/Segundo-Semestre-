@@ -1,7 +1,7 @@
 USE fincas;
 select pa.vepFinca, f.fcaNombre, p.prcRef, pa.vepProdEstim FROM fincas f
 INNER JOIN parcelas p ON f.fcaID = p.prcFinca
-INNER JOIN parcelavariedad pa ON p.prcFinca = pa.vepFinca AND p.prcUMI = pa.vepUMI
+INNER jOIN parcelavariedad pa ON p.prcFinca = pa.vepFinca AND p.prcUMI = pa.vepUMI
 INNER JOIN variedades v ON pa.vepVariedad = v.vrdID
 where v.vrdEspecie=6 and v.vrdVariedad='Black Amber';
 select sum(vepProdEstim) from parcelaVariedad where vepVariedad=18;
