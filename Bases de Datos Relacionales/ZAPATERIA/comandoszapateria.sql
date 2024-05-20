@@ -38,13 +38,14 @@ SELECT *
 FROM movcomcab
 INNER JOIN movcomdet ON movcomcab.id = movcomdet.idCab
 WHERE movcomcab.TipoMov = 202;
-SELECT movcomcab.id, SUM(-movcomdet.Cantidad) AS total_cantidad
+SELECT movcomcab.id, SUM(-movcomdet.Cantidad) AS total_cantidad, articulos.Descrip50 
 FROM movcomcab
 INNER JOIN movcomdet ON movcomcab.id = movcomdet.idCab
+inner join articulos on movcomdet.Articulo=articulos.id
 WHERE movcomcab.TipoMov = 202
-GROUP BY movcomcab.id ORder by movcomcab.id;
+GROUP BY movcomcab.id ORder by total_cantidad desc, movcomcab.id;
 -- cuantas veces vendieron x cantidad de productos
-Select total_cantidad, COUNT(Venta) from (SELECT movcomcab.id as Venta, SUM(-movcomdet.Cantidad) AS total_cantidad
+Select total_cantidad, COUNT(total_cantidad) from (SELECT movcomcab.id as Venta, SUM(-movcomdet.Cantidad) AS total_cantidad
 FROM movcomcab
 INNER JOIN movcomdet ON movcomcab.id = movcomdet.idCab
 WHERE movcomcab.TipoMov = 202
@@ -55,6 +56,20 @@ SELECT id, Descrip50
 FROM articulos
 INNER JOIN movcomdet ON articulos.id = movcomdet.idCab
 WHERE movcomdet.id = 23557
-GROUP BY articulos.id ORder by articulos.id
+GROUP BY articulos.id ORder by articulos.id;
 -- pendiente: nombre del articulo que se vendio una vez y fue el mas vendido 33 se vendio 1 vez
+select max(total_cantidad), id, descrip from(SELECT movcomcab.id as id, SUM(-movcomdet.Cantidad) AS total_cantidad, articulos.Descrip50 as descrip
+FROM movcomcab
+INNER JOIN movcomdet ON movcomcab.id = movcomdet.idCab
+inner join articulos on movcomdet.Articulo=articulos.id
+WHERE movcomcab.TipoMov = 202
+GROUP BY movcomcab.id ORder by total_cantidad desc, movcomcab.id) as subconsulta;
 -- de que colores hace la marca npo
+select ID, Descrip50, substr(codigo,4,3) as color from articulos where codigo like 'Npo%'
+group by color order by id,color;
+select * from articulos where codigo like 'Npo%' order by id;
+select * from artgrupos;
+select * from articulos;
+select artgrupos.id, artgrupos.nombre as ide, count(articulos.Grupo) as grupo from artgrupos 
+inner join articulos on artgrupos.id=articulos.Grupo group by grupo order by grupo;
+select * from articulos where Grupo = 29;
