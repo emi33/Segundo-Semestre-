@@ -1,14 +1,19 @@
 use magescom;
 select * from tbusuarios;
 show tables;
+-- mostrar primera fecha de movimientos comerciales cabecera
 select fecha from movcomcab order by fecha limit 1; -- primera fecha movimiento
+-- ver ultima fecha de movimientos comerciales cabecera
 select fecha from movcomcab order by fecha desc limit 1; -- ultima fecha movimiento
+-- ver ultima fecha de movimientos comerciales cabecera
 select min(fecha), max(fecha) from movcomcab; -- primera y ultima fecha de movimientos comerciales
 -- para calcular el promedio de un mes, debemos ver el primer mes que puede afectar el promedio general
+-- ver y eliminar movimiento cabecera con fecha '2016-08-31'
 select * from movcomcab where fecha='2016-08-31';
 -- delete from movcomcab where fecha='2016-08-31';
 select * from movcomcab;
 use magescom;
+-- VER registros huerfanos de movimiento detalle (usamos idcab)
 select * from movcomdet as mcd where mcd.idCab not in (select id from movcomcab);
 select * from movcomdet inner join movcomcab on !(movcomdet.idCab=movcomdet.id);
 -- delete from movcomdet where movcomdet.idCab=3 and movcomdet.id=12389; -- tabla limpia
@@ -16,6 +21,7 @@ select * from movcomdet inner join movcomcab on !(movcomdet.idCab=movcomdet.id);
 select * from estados order by id;
 -- contar los tipos de movimiento y la cantidad
 SELECT TipoMov, COUNT(TipoMov) FROM movcomcab GROUP BY TipoMov;
+-- VER DESCRIPCION DE TIPO DE MOVIMIENTOS Y LA CANTIDAD DE CADA TIPO(Inner join con tabla estados)
 select e.descrip as Tipo, mcc.TipoMov, count(mcc.TipoMov) as Veces
 from movcomcab mcc left join estados e on mcc.TipoMov=e.id
 group by mcc.TipoMov order by Veces desc;
@@ -70,6 +76,7 @@ group by color order by id,color;
 select * from articulos where codigo like 'Npo%' order by id;
 select * from artgrupos;
 select * from articulos;
+-- ver los grupo de articulos(tabla artgrupos) y contar la cantidad de articulos que tiene cada grupo
 select artgrupos.id, artgrupos.nombre as ide, count(articulos.Grupo) as grupo from artgrupos 
 inner join articulos on artgrupos.id=articulos.Grupo group by grupo order by grupo;
 select * from articulos where Grupo = 29;
