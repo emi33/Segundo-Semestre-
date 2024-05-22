@@ -80,3 +80,36 @@ select * from articulos;
 select artgrupos.id, artgrupos.nombre as ide, count(articulos.Grupo) as grupo from artgrupos 
 inner join articulos on artgrupos.id=articulos.Grupo group by grupo order by grupo;
 select * from articulos where Grupo = 29;
+-- ver producto con menor desvio estandar
+select D.Articulo as producto, year(C.FechaUM)*12 + month(C.FechaUM) - 24200 as x, sum(-D.Cantidad) as Cantidad 
+from movcomcab C inner join movcomdet D on C.id=D.idCab
+where C.tipomov=202
+group by Producto, X;
+-- GUARDAR TABLA PRODUCTO CON MENOR DESVIO ESTANDAR
+CREATE table tmp
+select D.Articulo as producto, year(C.FechaUM)*12 + month(C.FechaUM) - 24200 as x, sum(-D.Cantidad) as Cantidad 
+from movcomcab C inner join movcomdet D on C.id=D.idCab
+where C.tipomov=202
+group by Producto, X;
+select * from tmp;
+-- ver productos con desvio estandar, si desvio estandar es 0, se vendio una vez o se vendio igual todos los meses
+select producto, stddev(Cantidad) as desvio from tmp group by producto order by desvio;
+select * from articulos where articulos.id=172103;
+-- producto mas atemporal
+select producto, stddev(Cantidad) as desvio, count(x) as meses from tmp group by producto order by meses desc, desvio asc;
+select * from articulos where articulos.id=26403;
+select * from articulos where articulos.id=9789;
+-- eliminar tabla temporal
+drop table tmp;
+-- mejor opcion para uso de tablas temporales
+select D.Articulo as producto, year(C.FechaUM)*12 + month(C.FechaUM) - 24200 as x, sum(-D.Cantidad) as Cantidad 
+from movcomcab C inner join movcomdet D on C.id=D.idCab
+where C.tipomov=202
+group by Producto, X;
+-- ver variacion de precio de articulo 9789
+select movcomdet.PrecioUnit, movcomcab.Fecha as fecha 
+from movcomdet inner join movcomcab on movcomdet.idCab=movcomcab.id where articulo=9789 
+order by Fecha;
+-- ver precio articulo, ya esta ordenado por fecha, ya que se utiliza la fecha del servidor
+SELECT precioUnit FROM movcomdet WHERE articulo=9789 order by id desc;
+
