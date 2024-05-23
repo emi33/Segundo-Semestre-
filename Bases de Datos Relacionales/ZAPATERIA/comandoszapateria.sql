@@ -112,4 +112,53 @@ from movcomdet inner join movcomcab on movcomdet.idCab=movcomcab.id where articu
 order by Fecha;
 -- ver precio articulo, ya esta ordenado por fecha, ya que se utiliza la fecha del servidor
 SELECT precioUnit FROM movcomdet WHERE articulo=9789 order by id desc;
+select * from movcomdet 
+inner join articulos on movcomdet.Articulo=articulos.id
+inner join artgrupos on articulos.Grupo=artgrupos.id where artgrupos.Nombre LIKE 'ALPARGATA%' order by idCab;
+-- precio promedio mensual historico de venta de las alpargatas
+select year(movcomcab.fechaUM) AS AÑO, month(movcomcab.fechaUM) as MES, AVG(movcomdet.PrecioUnit) as precio, SUM(articulos.Cantidad) as Compra, 
+articulos.Grupo as NumGrupo, artgrupos.Nombre as grupo
+from movcomcab 
+inner join movcomdet on movcomcab.id=movcomdet.idCab 
+inner join articulos on movcomdet.Articulo=articulos.id
+inner join artgrupos on articulos.Grupo=artgrupos.id where artgrupos.Nombre LIKE 'ALPARGATA%' AND movcomcab.TipoMov=202
+group by AÑO,MES order by AÑO,MES;
+
+-- ver detalles del promedio
+
+select * from movcomdet 
+inner join articulos on movcomdet.Articulo=articulos.id
+inner join artgrupos on articulos.Grupo=artgrupos.id where artgrupos.Nombre LIKE 'ALPARGATA%' order by abs(movcomdet.Cantidad);
+-- borrar registros donde la cantidad sea menor a uno de todos los registros
+select * from movcomdet D where abs(Cantidad)<1;
+-- borrar registros donde la cantidad sea menor a uno
+select * from movcomdet 
+inner join articulos on movcomdet.Articulo=articulos.id
+inner join artgrupos on articulos.Grupo=artgrupos.id where artgrupos.Nombre LIKE 'ALPARGATA%' and (abs(movcomdet.Cantidad))<1;
+select movcomdet.Articulo, articulos.Descrip20 from movcomdet inner join articulos on movcomdet.Articulo = articulos.id group by Descrip20;
+-- desactivar modo seguro
+SET SQL_SAFE_UPDATES=0;
+-- borrar cantidades 23556
+delete from movcomdet where abs(Cantidad)<1;
+-- activar modo seguro
+set sql_safe_updates=0;
+SELECT movcomcab.id as id, Count(-movcomdet.idCab) AS cabeceras
+FROM movcomcab
+left JOIN movcomdet ON movcomcab.id = movcomdet.idCab
+GROUP BY movcomcab.id ORder by movcomcab.id;
+
+delete movcomdet from(SELECT movcomcab.id as Venta, Count(-movcomdet.idCab) AS cabeceras
+FROM movcomcab
+left JOIN movcomdet ON movcomcab.id = movcomdet.idCab
+GROUP BY movcomcab.id ORder by movcomcab.id) as subconsulta where cabeceras=0;
+
+SELECT movcomcab.id as Venta, Count(-movcomdet.idCab) AS cabeceras
+FROM movcomcab
+left JOIN movcomdet ON movcomcab.id = movcomdet.idCab
+GROUP BY movcomcab.id ORder by movcomcab.id;
+
+-- delete registro
+select * from movcomcab where id not in(select distinctrow idCab from movcomdet);
+delete from movcomcab where id not in(select distinctrow idCab from movcomdet);
+
 
