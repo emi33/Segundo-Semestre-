@@ -162,3 +162,4 @@ select * from movcomcab where id not in(select distinctrow idCab from movcomdet)
 delete from movcomcab where id not in(select distinctrow idCab from movcomdet);
 
 
+SELECT NULL FROM movcomdet AS parent join movcomcab WHERE parent.idCad = movcomcab.id;
