@@ -1,62 +1,99 @@
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
+#include <stdbool.h>
+#include <ctype.h>
 struct alumno
 {
-    char nombre[50];
-    char apellido[50];
+    char nombre[25];
+    char apellido[25];
     int edad;
     int notas[4];
     float promedio;
 };
+int verificarnum()
+{
+    char note[10]; // Increase size to handle extra input
+    int nume, suma, temp;
+    bool valid = false;
+    while (!valid)
+    {
+        fgets(note, 10, stdin);
+        note[strcspn(note, "\r\n")] = 0; // Remove newline character
+        suma = 0;
+        temp = 0;
 
+        for (int l = 0; l < strlen(note); l++)
+        {
+            if (isdigit(note[l]))
+            {
+                suma++;
+            }else{
+                temp++;
+            }
+        }
+        // 23, 2
+        if (temp == 0 && sscanf(note, "%d", &nume) == 1 && nume >= 0 && nume <= 100)
+        {
+            valid = true;
+        }
+        else
+        {
+            printf("Ingrese un número válido del 000 al 100: ");
+        }
+    }
+    return nume;
+}
 int main()
 {
-    int suma = 0, i = 0;
+    int suma, i = 0, nume;
     char c;
     struct alumno a[100];
+    char notes[3];
     do
     {
         printf("Ingrese nombre: ");
-        fgets(a[i].nombre, sizeof(a[i].nombre), stdin);
-        a[i].nombre[strcspn(a[i].nombre, "\n")] = '\0';
+        fgets(a[i].nombre, 25, stdin);
+        a[i].nombre[strcspn(a[i].nombre, "\r\n")] = 0;
 
         printf("Ingrese apellido: ");
-        fgets(a[i].apellido, sizeof(a[i].apellido), stdin);
-        a[i].apellido[strcspn(a[i].apellido, "\n")] = '\0';
+        fgets(a[i].apellido, 25, stdin);
+        a[i].apellido[strcspn(a[i].apellido, "\r\n")] = 0;
 
         printf("Ingrese edad: ");
-        scanf("%d", &a[i].edad);
+        nume = verificarnum();
+        a[i].edad = nume;
 
         printf("Promedio: \n");
-
+        suma = 0;
         for (int j = 0; j < 4; j++)
         {
             printf("Ingrese nota %d: ", j + 1);
-            scanf("%d", &a[i].notas[j]);
+            nume = verificarnum();
+            a[i].notas[j] = nume;
             suma = suma + a[i].notas[j];
         }
 
         a[i].promedio = (float)suma / 4;
 
-          while ((c = getchar()) != '\n' && c != EOF);
-
         printf("\n¿Agregar otro usuario? (s/n): ");
-       scanf("%c",&c);
-
+        scanf(" %c", &c);
+        while ((getchar()) != '\n')
+            ;
         if (c == 'n')
         {
             break;
         }
 
-         i++;
+        i++;
     } while (1);
 
-    for (int i = 0; i < 100; i++)
+    printf("\nTodos los datos: ");
+    for (int k = 0; k <= i; k++)
     {
-        printf("\nTodos los datos: ");
-        printf("\nNombre: %s %s\nEdad: %d\nPromedio: %.2f\n", a[i].nombre, a[i].apellido, a[i].edad, a[i].promedio);
-        if (a[i].nombre == NULL)
+
+        printf("\nNombre: %s %s\nEdad: %d\nPromedio: %.2f\n", a[k].nombre, a[k].apellido, a[k].edad, a[k].promedio);
+        if (a[k].nombre == NULL)
         {
             break;
         }
