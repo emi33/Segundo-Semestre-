@@ -147,7 +147,7 @@ FROM movcomcab
 left JOIN movcomdet ON movcomcab.id = movcomdet.idCab
 GROUP BY movcomcab.id ORder by movcomcab.id;
 
-delete movcomdet from(SELECT movcomcab.id as Venta, Count(-movcomdet.idCab) AS cabeceras
+select * from(SELECT movcomcab.id as Venta, Count(-movcomdet.idCab) AS cabeceras
 FROM movcomcab
 left JOIN movcomdet ON movcomcab.id = movcomdet.idCab
 GROUP BY movcomcab.id ORder by movcomcab.id) as subconsulta where cabeceras=0;
