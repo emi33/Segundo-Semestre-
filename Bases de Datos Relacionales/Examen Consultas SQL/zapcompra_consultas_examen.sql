@@ -1,3 +1,4 @@
+use zapcompra;
 select count(id) from movcomdet;
 SELECT * FROM movcomdet ORDER by idCab;
 select * from estados;
@@ -67,6 +68,9 @@ WHERE idCab = (
 );
 
 -- ¿Cuántos artículos incluía la mayor compra?
+select idCab, max(cantidades) from (SELECT idCab, SUM(Cantidad) as cantidades from movcomdet
+GROUP BY idCab) as sub;-- solucion correcta
+    
 select sum(movcomdet.Cantidad) as mayor_compra from movcomdet where idCab=481219;
 select sum(movcomdet.Cantidad) as mayor_compra from movcomdet where idCab=411673;
 SELECT SUM(Cantidad) AS cantidad_total_articulos
@@ -78,6 +82,8 @@ WHERE idCab = (
     ORDER BY COUNT(*) DESC
     LIMIT 1
 );
+
+ 
 select movcomdet.Articulo, articulos.Descrip50, articulos.codigo from movcomdet 
 inner join articulos on movcomdet.Articulo=articulos.id where idCab=411673;
 select movcomdet.Articulo, articulos.Descrip50 from movcomdet inner join articulos on movcomdet.Articulo=articulos.id where idCab=481219;
