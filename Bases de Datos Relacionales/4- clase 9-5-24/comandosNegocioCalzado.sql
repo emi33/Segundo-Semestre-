@@ -16,7 +16,7 @@ group by nombre having count(*)>1;
 select nombre, count(*) as categoria from artgrupos as grupo group by nombre 
 having count (*)>1;
 select nombre, count(*) as categoria from artgrupos as grupo where activo=0 
-group by categoria;
+group by categoria; 
 select articulos.id,codigo,descrip50,artgrupo.nombre, unidades.nombre 
 from ´magescom´,´articulos´ 
 inner join ´magescom´.´unidades´ on articulos.grupo=unidades.id

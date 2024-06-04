@@ -1,0 +1,73 @@
+CREATE DATABASE IF NOT EXISTS zapcompra;
+USE zapcompra;
+
+--
+-- Definition of table `artgrupos`
+--
+
+
+
+DROP TABLE IF EXISTS `articulos`;
+CREATE TABLE `articulos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `Activo` int(11) NOT NULL DEFAULT '1',
+  `Codigo` varchar(14) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `Descrip50` varchar(50) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `Descrip20` varchar(20) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `Cantidad` int(10) NOT NULL DEFAULT '1',
+  `Unidad` int(10) NOT NULL DEFAULT '1',
+  `Grupo` int(10) NOT NULL DEFAULT '1',
+  `PrecioC` decimal(19,4) DEFAULT NULL,
+  `PrecioV` decimal(19,4) DEFAULT NULL,
+  `PrecioOferta` decimal(19,4) DEFAULT NULL,
+  `AlicIva` double DEFAULT NULL,
+  `ImpInt` double DEFAULT NULL,
+  `ExistMinima` int(10) NOT NULL DEFAULT '0',
+  `Observ` varchar(50) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `Usuario` int(10) DEFAULT NULL,
+  `FechaUM` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `Index_1` (`Codigo`) USING BTREE,
+  KEY `Index_2` (`Grupo`) USING BTREE,
+  KEY `Index_3` (`Unidad`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=174543 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+
+DROP TABLE IF EXISTS `movcomcab`;
+CREATE TABLE `movcomcab` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `Activo` smallint(5) NOT NULL,
+  `Sucursal` int(10) DEFAULT NULL,
+  `Fecha` datetime DEFAULT NULL,
+  `TipoMov` int(10) DEFAULT NULL,
+  `idPers` int(10) DEFAULT NULL,
+  `PtoAtencion` int(10) DEFAULT NULL,
+  `PtoFact` int(10) DEFAULT NULL,
+  `Caja` int(10) DEFAULT NULL,
+  `ImpTotal` decimal(19,4) DEFAULT NULL,
+  `ImpNetoGrav` decimal(19,4) DEFAULT NULL,
+  `CtaCont` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `Index_1` (`TipoMov`,`Sucursal`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1933334 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `movcomdet`;
+CREATE TABLE `movcomdet` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `idCab` int(10) DEFAULT NULL,
+  `Articulo` int(10) DEFAULT NULL,
+  `Cantidad` decimal(19,4) DEFAULT NULL,
+  `PrecioUnit` decimal(19,4) DEFAULT NULL,
+  `BonificUnit` decimal(19,4) DEFAULT NULL,
+  `Subtotal` decimal(19,4) DEFAULT NULL,
+  `Alicuota` decimal(19,4) DEFAULT NULL,
+  `CtaCont` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `Index_1` (`idCab`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=4923516 DEFAULT CHARSET=utf8;
+ALTER TABLE `movcomdet`
+ADD CONSTRAINT `FK_movcomdet_movcomcab` FOREIGN KEY (`idCab`) REFERENCES `movcomcab`(`id`);
+ALTER TABLE `movcomdet`
+ADD CONSTRAINT `FK_movcomdet_articulos` FOREIGN KEY (`Articulo`) REFERENCES `articulos`(`id`);
+
