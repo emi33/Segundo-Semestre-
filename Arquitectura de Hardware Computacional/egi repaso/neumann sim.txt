@@ -1,0 +1,25 @@
+// suma de numero x incremental, z cantidad de veces
+LOD X
+STO Y
+LOD Z
+SUB #1
+STO Z
+JMZ 19
+LOD Y
+ADD #1
+STO Y
+LOD X
+ADD Y
+STO X
+STO W
+LOD Z
+SUB #1
+STO Z
+JMZ 19
+JMP 7
+HLT
+// guardamos resultado en w
+// ej.: x-->1
+// z-->3
+// 1 + 2 + 3 --> 3 valores a sumar
+// w= 6 --> resultado
