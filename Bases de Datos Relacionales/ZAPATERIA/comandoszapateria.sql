@@ -69,7 +69,7 @@ FROM movcomcab
 INNER JOIN movcomdet ON movcomcab.id = movcomdet.idCab
 inner join articulos on movcomdet.Articulo=articulos.id
 WHERE movcomcab.TipoMov = 202
-GROUP BY movcomcab.id ORder by total_cantidad desc, movcomcab.id) as subconsulta;
+GROUP BY movcomcab.id ORDER by total_cantidad desc, movcomcab.id) as subconsulta;
 -- de que colores hace la marca npo
 select ID, Descrip50, substr(codigo,4,3) as color from articulos where codigo like 'Npo%'
 group by color order by id,color;
@@ -163,3 +163,5 @@ delete from movcomcab where id not in(select distinctrow idCab from movcomdet);
 
 
 SELECT NULL FROM movcomdet AS parent join movcomcab WHERE parent.idCad = movcomcab.id;
+
+ALTER TABLE estados ADD Subsistema int(11);

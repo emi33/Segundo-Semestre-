@@ -1,0 +1,400 @@
+[33mcommit 135234a0aafc308e64f2b3161f04787e96f42fe9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Fri Jun 7 22:11:03 2024 -0300
+
+    fix excel y vns
+
+[33mcommit e1872b4adbb1496d85db7024eea399921ad66a76[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed Jun 5 12:10:46 2024 -0300
+
+    bases de datos
+
+[33mcommit 424b42fb4f861bc3470089ef6e487eee1d0716a5[m
+Merge: 1e6f2e5 a12814e
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed Jun 5 08:32:30 2024 -0300
+
+    Merge branch 'main' of https://github.com/emi33/Segundo-Semestre-
+
+[33mcommit a12814e0263430db40b3ebce10528bf1b90cceaa[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Jun 4 23:43:00 2024 -0300
+
+    code lab
+
+[33mcommit f09f314fd31dc8f64d655d7c032d2af8bb26dd8b[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Jun 4 22:56:30 2024 -0300
+
+    arqui
+
+[33mcommit f616b93a4ad349c3d9bda4784b0fd11b700b1be1[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Jun 4 22:52:59 2024 -0300
+
+    code lab
+
+[33mcommit 1e6f2e5a9065d4c1178cf0712eee019d9f7323c5[m
+Merge: 569a0ab 3bb6dc2
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Jun 4 04:54:05 2024 -0300
+
+    Merge branch 'main' of https://github.com/emi33/Segundo-Semestre-
+
+[33mcommit 3bb6dc210b90b385d16e64852df1622a98702be1[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Sat Jun 1 23:45:22 2024 -0300
+
+    examen fix
+
+[33mcommit 3b3d1e3fd5c93fada70fc88dfd68d5b9ba355041[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Sat Jun 1 00:33:11 2024 -0300
+
+    examen
+
+[33mcommit 569a0ab850dd7f6f7a0d89fea50192cb52ddc7c0[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu May 30 12:57:09 2024 -0300
+
+    nuevos datos
+
+[33mcommit 35955cc238e63f5f7df82061c2ef53f321965bd4[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 29 07:22:36 2024 -0300
+
+    29
+
+[33mcommit 28fc8089ed2a6794a0b7a2f703e5bed8fb4bb888[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 27 13:28:03 2024 -0300
+
+    simd
+
+[33mcommit 2a3953d88c8f1953b85f9730a9590d6fea58406d[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 27 07:41:45 2024 -0300
+
+    repaso
+
+[33mcommit 195851832c14db9c753a85d110f1a80ffaf418fe[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Sun May 26 22:56:22 2024 -0300
+
+    c
+
+[33mcommit 7f53472e4c7ef8ea05df47634c3b613ebae1c5da[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu May 23 13:40:21 2024 -0300
+
+    consulta delete
+
+[33mcommit effcd7192f91f6861974179149d0d871ccf2a261[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 22 12:08:03 2024 -0300
+
+    sql desvios
+
+[33mcommit 9a27fc4c5efcaed15e4ca185b667ea5a933ad0d5[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 22 00:40:04 2024 -0300
+
+    casos de uso
+
+[33mcommit 686f88342b1ae952ad84657930b52df3140a3d20[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue May 21 18:28:40 2024 -0300
+
+    borrar
+
+[33mcommit 7986f28838fb80ddc252efe0c7ace9a6331830cf[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 20 18:45:36 2024 -0300
+
+    20-5
+
+[33mcommit 2e8deda2a7dc41dd04dd250088f23f270fd8352d[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 20 02:00:52 2024 -0300
+
+    w
+
+[33mcommit 06f67d9324db69bce86ab78fd7dc8c9f5a2e386c[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 20 00:40:24 2024 -0300
+
+    bbdd compĺeto
+
+[33mcommit 58490048b4c9e55262c759c877f7ce039bdd4179[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu May 16 15:03:26 2024 -0300
+
+    bases subconsulta
+
+[33mcommit f3bd9f3f4ba934b741282016717302a5bf7f73b2[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu May 16 00:26:31 2024 -0300
+
+    cambios
+
+[33mcommit 0e049878642d4a2384af87d027f3ae62f976884d[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 15 12:11:18 2024 -0300
+
+    excel
+
+[33mcommit 0d387a08b644f9665e983d64ab5e2818cf72746a[m
+Merge: 520e1fe 40d15be
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 15 07:55:41 2024 -0300
+
+    Merge branch 'main' of https://github.com/emi33/Segundo-Semestre-
+
+[33mcommit 520e1fe1c2970be1a7e09be267d59694c2260ad8[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 15 07:55:10 2024 -0300
+
+    nose
+
+[33mcommit 40d15be7b4de2c059d565578e045c8d7c5ef4186[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 15 02:15:40 2024 -0300
+
+    casos de uso
+
+[33mcommit 998bf758dc9d98230ca2a40568900c8f322bf3ba[m
+Merge: 000440d 8e3d386
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 13 10:34:28 2024 -0300
+
+    Merge branch 'main' of https://github.com/emi33/Segundo-Semestre-
+
+[33mcommit 000440de5adac3de3adef17f29fd543c3e6e5f7b[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 13 10:34:04 2024 -0300
+
+    13-5
+
+[33mcommit 8e3d3869c4a4b76519a384157ab1f9a2319ec614[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 13 02:00:44 2024 -0300
+
+    bbdd arch prog
+
+[33mcommit 437833047eef991bea97b933e94746dc23fdf21d[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu May 9 09:04:53 2024 -0300
+
+    clase 9 mayo
+
+[33mcommit ef1e7085fae8f2019825c3f6f99d288ee11a1ced[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 8 20:22:02 2024 -0300
+
+    excel
+
+[33mcommit 11310709224741906a6c830632da991973fb9fd7[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 6 16:41:57 2024 -0300
+
+    estructuras
+
+[33mcommit b17c332cbc2065a07dfeee200861646cdfd74df4[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon May 6 08:19:00 2024 -0300
+
+    power point
+
+[33mcommit b70e75f4ef40d9daadce6edac7af6712bc3b1d58[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Fri May 3 01:40:33 2024 -0300
+
+    bbdd
+
+[33mcommit 7e99efce08dfbdda2b8a5e7e539533767c38fdd7[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed May 1 23:53:23 2024 -0300
+
+    ingles programacion
+
+[33mcommit 534d290232dbc385a24ba52cfbd5abbff3825f86[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Apr 30 13:34:12 2024 -0300
+
+    fix punteros
+
+[33mcommit 78f61891ffaba2bcb2e15091283ff03f296dd1c7[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 29 12:18:43 2024 -0300
+
+    estructuras
+
+[33mcommit fac03975636aec41c1e444a6cdd89e5bdc21b061[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 29 08:52:45 2024 -0300
+
+    app agario
+
+[33mcommit 5e2bb6eb9ed435d74d0e4231d50848f7b7b7a53b[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu Apr 25 13:17:28 2024 -0300
+
+    bases de datos usuarios
+
+[33mcommit 5aad8d9db679a0dd9e08b16caf79982a38e76478[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu Apr 25 07:00:41 2024 -0300
+
+    25
+
+[33mcommit d8f2a3be4114d77b67b9cb91809ad519b6ca5f4a[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed Apr 24 12:22:00 2024 -0300
+
+    desvio estandar arreglar
+
+[33mcommit a66e3a2fff0d8fa8ac4c96ff8262062795f91460[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed Apr 24 10:27:49 2024 -0300
+
+    24-4
+
+[33mcommit 603a8d49c3ccb8f8b2849c9ecc1f600deb851ce4[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 22 04:04:48 2024 -0300
+
+    chat gpt bbdd fincas
+
+[33mcommit 42e2b561aea6daf38fa215185f85c39bd028229f[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 22 02:39:19 2024 -0300
+
+    bbdd
+
+[33mcommit b75fcdb509a667b506c62fa15e4a4362731f6457[m
+Merge: a8c3d93 a72d29f
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 22 02:35:12 2024 -0300
+
+    Merge branch 'main' of https://github.com/emi33/Segundo-Semestre-
+
+[33mcommit a8c3d933e93876c6806d19ae3bae3ccd8d54de6d[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 22 02:34:44 2024 -0300
+
+    new
+
+[33mcommit a72d29f18319a512a0652a4e292bad032f1804a8[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 22 02:33:16 2024 -0300
+
+    bbdd
+
+[33mcommit 5eb26dc95a19a05cfd72610e3854f060100e8e69[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu Apr 18 01:12:44 2024 -0300
+
+    notasddbb
+
+[33mcommit 2eb94a4f6521f492829f315fe90f3043ca5d8b35[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu Apr 18 01:03:16 2024 -0300
+
+    algebra
+
+[33mcommit 3d550f68416f21f1c68aa07100a02c25d1ea1caf[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Apr 16 03:45:11 2024 -0300
+
+    programacion estructurada
+
+[33mcommit ce2530717cd40416527a24316aa6b3af18950757[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 15 23:00:35 2024 -0300
+
+    clase 15
+
+[33mcommit def3f886ae7e2a1bf4ec88ec30570dd5b598b569[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 15 00:08:04 2024 -0300
+
+    vonneumann
+
+[33mcommit 8fdee8c3d9c463cab2e98ab5906a4edb1706f955[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu Apr 11 21:17:44 2024 -0300
+
+    bbdd fincas
+
+[33mcommit 67a1d2f4a9593a9fa5b84a1c244d8e416a0b24aa[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Thu Apr 11 20:18:40 2024 -0300
+
+    prueba
+
+[33mcommit 92f4df0cddc332f85a6a621bd913b7eeabf8ce1b[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Wed Apr 10 00:49:12 2024 -0300
+
+    evaluacion
+
+[33mcommit 9472f01c35fe13758a52c129a945c63395a956f8[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Apr 9 23:40:29 2024 -0300
+
+    modelo er
+
+[33mcommit 9c2109da96937f693056eedfe4f1665289834f5b[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Apr 9 23:20:26 2024 -0300
+
+    vnsim app
+
+[33mcommit 14c9d9e4cb80d393c4378e6e7fdacd2ee116d446[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Tue Apr 9 16:18:48 2024 -0300
+
+    modelo der
+
+[33mcommit 0159cc884a9e4156b63d5dd08bfe65dc7bc9a0e1[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 8 10:13:50 2024 -0300
+
+    8 de abril
+
+[33mcommit 99d9b7b79e1ef8a8170300c905430997b8819fe7[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Mon Apr 8 11:38:24 2024 +0800
+
+    nuevo puerta
+
+[33mcommit 34c517f922e5e703131e4090e78c00a0210827e2[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Sun Apr 7 20:39:23 2024 -0300
+
+    fix num complex
+
+[33mcommit 3cdd8b008bc55d5c68a92b924b0ece44b6e5a79a[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Fri Apr 5 21:53:58 2024 -0300
+
+    recambio
+
+[33mcommit 7304532d70b516f3187d2e97831558e8b3b6f524[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Fri Apr 5 21:50:35 2024 -0300
+
+     cambios m
+
+[33mcommit 969ac0e70e5d74a6495dac9ec1322ba7f452ced6[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Fri Apr 5 21:14:14 2024 -0300
+
+    todos los archivos
+
+[33mcommit e41e313ded000d8b852687251cc9fcdfc18e6513[m
+Author: emi33 <emiagustinchoque@gmail.com>
+Date:   Fri Apr 5 21:05:16 2024 -0300
+
+    first committ
