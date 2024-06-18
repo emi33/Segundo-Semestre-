@@ -29,6 +29,17 @@ SELECT * from movcomcab order by movcomcab.Fecha desc;
 -- ¿A cuántos proveedores se compró en más de 200 oportunidades?
 select count(contador) from (select idPers, count(idPers) as contador from movcomcab group by idPers having contador>200)as sub2;
 select idPers, count(idPers) as contador from movcomcab group by idPers having contador>200;
+SELECT idPers, COUNT(id) as veces from movcomcab where TipoMov=201 group by idPers order by veces DESC;
+
+-- Borrar movcomcab id=7090
+select * from movcomcab where idPers=7090;
+select * from movcomdet inner join movcomcab on movcomdet.idCab=movcomcab.id where idPers=7090;
+select * from movcomdet where idCab not in(select distinctrow id from movcomcab);
+select * from movcomdet where idCab=8555;
+DELETE FROM movcomdet D inner join movcomcab D ON C.id=D.idCab where idCab=7090;
+delete from movcomdet where idCab NOT 21921 in(select id from movcomcab);
+delete from movcomcab where idCab=7090;
+select * from movcomcab inner join movcomdet on movcomcab.id=movcomdet.idCab where idPers=7090;
 
 -- ¿Cuál es el ID (idPers) del proveedor al que se le compró más veces?
 select idPers, count(idPers) as contador from movcomcab group by idPers order by contador desc limit 1;
