@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 #define LONGITUD 4
 
 
@@ -10,7 +10,7 @@ int main() {
 
  int autenticado = 0; // 1 es que sÃ­, 0 que no
 
- printf("Ingresa la contraseña:\n");
+ printf("Ingresa la contraseï¿½a:\n");
 
  fgets(cadena, LONGITUD, stdin); 
 

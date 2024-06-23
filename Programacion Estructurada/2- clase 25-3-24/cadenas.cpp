@@ -13,5 +13,4 @@ int main(){
     printf("%s\n", cadena);
     int longc= strlen(cadena);
     printf("%d\n", longc);
-
 }

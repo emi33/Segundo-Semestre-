@@ -12,7 +12,6 @@ ALUMNO PROMOCIONAL ES APROBAR TODO EL PROGRESO
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#include <stdbool.h>
 #include <ctype.h>
 #include <conio.h>
 struct Condicion
@@ -35,7 +34,10 @@ struct Alumno
     struct Materia materias[4];
 };
 int cantidad = 0;
-const char cursos[4][30] = {"Programacion Estructurada", "Logica Matematica", "Comprension de Textos", "Arquitectura"};
+const char cursos[4][30] = {"Programacion Estructurada", 
+                            "Logica Matematica", 
+                            "Comprension de Textos", 
+                            "Arquitectura"};
 void bienvenida()
 {
     printf("----------------------------------------------------------\n");
@@ -64,7 +66,6 @@ int verificarnum()
         note[strcspn(note, "\r\n")] = 0; // Remove newline character
         suma = 0;
         temp = 0;
-
         for (int l = 0; l < strlen(note); l++)
         {
             if (isdigit(note[l]))

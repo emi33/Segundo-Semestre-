@@ -9,10 +9,7 @@ bool flag=true;
             diff= c1[i]-c2[i];
             flag=false;
         }
-		
     }
-    
-    
     return diff;
 }
 int main(){

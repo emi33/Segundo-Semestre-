@@ -1,3 +1,4 @@
+//pedir tna, INGRESAR DINERO, CACULAR TOTAL ANUAL Y TOTAL MENSUAL
 #include<stdio.h>
 float tasaanual(float peso, float altura);
 

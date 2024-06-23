@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include<conio.h>
 #include <string.h>
 
 int main() {
@@ -10,10 +10,11 @@ int main() {
 
   printf("%d",strlen(cadena));
 
-  for(i=0; i<strlen(cadena); i++)
+  for(i=0; i<strlen(cadena); i++){
 
       printf("%c",cadena[i]);
-
+      }
+  getch();
   return 0;
 
 }
