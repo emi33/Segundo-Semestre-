@@ -3,6 +3,9 @@
         "stdio.h": "c",
         "iostream": "cpp",
         "MISTRCMP.C": "cpp",
-        "string.h": "c"
+        "string.h": "c",
+        "NOMBRE.C": "cpp",
+        "PRUEBAPAPEL.C": "cpp",
+        "conio.h": "c"
     }
 }
