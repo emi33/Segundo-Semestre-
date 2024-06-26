@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" modified="2024-06-26T02:50:25.448Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="_c3-tRGwkmRkXBpNM7Y-" version="24.5.3" type="device">
+  <diagram name="Page-1" id="zmCBcRxrY5_dOIz_oEEa">
+    <mxGraphModel dx="1272" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-1" value="Compra Creditos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="570" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-2" value="CLIENTE" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="420" width="30" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="W7pZK4l0ois0V_tZoCtv-3" target="W7pZK4l0ois0V_tZoCtv-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-3" value="Generar Usuario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-4" value="Catalogo Canciones" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="350" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-8" value="Compra Canciones" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="W7pZK4l0ois0V_tZoCtv-2" target="W7pZK4l0ois0V_tZoCtv-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="410" as="sourcePoint" />
+            <mxPoint x="290" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="W7pZK4l0ois0V_tZoCtv-3" target="W7pZK4l0ois0V_tZoCtv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="410" as="sourcePoint" />
+            <mxPoint x="290" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="W7pZK4l0ois0V_tZoCtv-4" target="W7pZK4l0ois0V_tZoCtv-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="410" as="sourcePoint" />
+            <mxPoint x="290" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.012;entryY=0.753;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="W7pZK4l0ois0V_tZoCtv-3" target="W7pZK4l0ois0V_tZoCtv-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="410" as="sourcePoint" />
+            <mxPoint x="290" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W7pZK4l0ois0V_tZoCtv-23" value="Administrar Usuario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
