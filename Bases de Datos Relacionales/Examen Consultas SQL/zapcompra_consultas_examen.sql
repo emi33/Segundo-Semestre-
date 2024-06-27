@@ -36,7 +36,7 @@ select * from movcomcab where idPers=7090;
 select * from movcomdet inner join movcomcab on movcomdet.idCab=movcomcab.id where idPers=7090;
 select * from movcomdet where idCab not in(select distinctrow id from movcomcab);
 select * from movcomdet where idCab=8555;
-DELETE FROM movcomdet D inner join movcomcab D ON C.id=D.idCab where idCab=7090;
+DELETE FROM movcomdmovcomcabet D inner join movcomcab D ON C.id=D.idCab where idCab=7090;
 delete from movcomdet where idCab NOT 21921 in(select id from movcomcab);
 delete from movcomcab where idCab=7090;
 select * from movcomcab inner join movcomdet on movcomcab.id=movcomdet.idCab where idPers=7090;
@@ -94,7 +94,6 @@ WHERE idCab = (
     LIMIT 1
 );
 
- 
 select movcomdet.Articulo, articulos.Descrip50, articulos.codigo from movcomdet 
 inner join articulos on movcomdet.Articulo=articulos.id where idCab=411673;
 select movcomdet.Articulo, articulos.Descrip50 from movcomdet inner join articulos on movcomdet.Articulo=articulos.id where idCab=481219;
